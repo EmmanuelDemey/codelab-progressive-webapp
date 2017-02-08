@@ -1,0 +1,7 @@
+{
+  "name": "bespoke.js",
+  "main": "./dist/bespoke.js",
+  "ignore": [
+    "**/.*"
+  ]
+}
