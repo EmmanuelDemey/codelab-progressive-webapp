@@ -2,6 +2,40 @@
 
 ## TP1 - Auditer votre application
 
+Avant d'implémenter les fonctionnalités permettant de rendre une application compatible *Progressive Webapp*, il est intéressant
+tout d'abord de faire un petit audit de l'existant. Nous allons éviter de le faire à la main, mais nous allons plutôt utiliser l'outil
+*Lighthouse*, développé par l'équipe Chrome. 
+
+Cet outil peut soit être utilisé via une extension Chrome, ou en ligne de commande via un module *NPM*. Nous allons utiliser cette dernière 
+solution. 
+
+* Installez le module `lighthouse` via `NPM`
+
+```shell
+npm i -g lighthouse
+```
+
+Vous pouvez maintenant auditer l'application que nous vous proposons. 
+
+* Lancez l'application
+
+```shell
+node server.js
+```
+
+* Lancez *LightHouse*
+
+```shell
+lighthouse http://localhost:3003/
+```
+
+L'outil doit normalement vous retourner un rapport d'audit directement dans la console. 
+Nous allons essayer de corriger tous ces problèmes lors ce codelab. Un rapport HTML doit 
+normalement être généré. 
+
+* Notez la note initiale retournée par *LightHouse*. Elle doit normalement être égale à ...
+
+
 ## TP2 - Mise en place de Http2
 
 La première optimisation que nous allons mettre en place est l'utilisation d'HTTP2 sur notre 
