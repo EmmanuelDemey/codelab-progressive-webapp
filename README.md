@@ -4,8 +4,9 @@
 
 Pour faire ce codelab, vous avez besoin des outils suivants : 
 
-- NodeJS 7.x
-- Google Chrome
+* GIT
+* NodeJS 7.x
+* Google Chrome
 
 ## TP1 - Auditer votre application
 
