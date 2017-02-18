@@ -10,11 +10,11 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 ## TP1 - Auditer votre application
 
-Avant d'implémenter les fonctionnalités permettant de rendre une application compatible *Progressive Webapp*, il est intéressant
+Avant d'implémenter les fonctionnalités permettant de rendre une application compatible **Progressive Webapp**, il est intéressant
 tout d'abord de faire un petit audit de l'existant. Nous allons éviter de le faire à la main, mais nous allons plutôt utiliser l'outil
-*Lighthouse*, développé par l'équipe Chrome. 
+**Lighthouse**, développé par l'équipe Chrome. 
 
-Cet outil peut soit être utilisé via une extension Chrome, ou en ligne de commande via un module *NPM*. Nous allons utiliser cette dernière 
+Cet outil peut soit être utilisé via une extension Chrome, ou en ligne de commande via un module **NPM**. Nous allons utiliser cette dernière 
 solution. 
 
 * Installez le module `lighthouse` via `NPM`
@@ -31,7 +31,7 @@ Vous pouvez maintenant auditer l'application que nous vous proposons.
 node server.js
 ```
 
-* Lancez *LightHouse*
+* Lancez **LightHouse**
 
 ```shell
 lighthouse http://localhost:3003/
@@ -41,7 +41,7 @@ L'outil doit normalement vous retourner un rapport d'audit directement dans la c
 Nous allons essayer de corriger tous ces problèmes lors ce codelab. Un rapport HTML doit 
 normalement être généré. 
 
-* Notez la note initiale retournée par *LightHouse*. Elle doit normalement être égale à ...
+* Notez la note initiale retournée par **LightHouse**. Elle doit normalement être égale à ...
 
 
 ## TP2 - Mise en place de Http2
@@ -50,11 +50,11 @@ La première optimisation que nous allons mettre en place est l'utilisation d'HT
 serveur. Le serveur que nous vous proposons est un serveur Express (NodeJS), mais ne supporte
 pour l'instant que HTTP. 
 
-Nous allons donc intégrer le module `NodeJS` *spdy*  afin de gérer cette nouvelle version du protocole. 
+Nous allons donc intégrer le module `NodeJS` **spdy**  afin de gérer cette nouvelle version du protocole. 
 Nous vous conseillons de faire les modifications en deux étapes : 
 
 - Rendre accessible votre site que en HTTP2
-- Utilisation la fonctionnalité de *Server Push* pour envoyer les ressources statiques de votre site à votre client
+- Utilisation la fonctionnalité de **Server Push** pour envoyer les ressources statiques de votre site à votre client
 
 ### Site accessible en HTTP2
 
