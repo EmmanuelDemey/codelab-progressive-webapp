@@ -88,6 +88,10 @@ const options = {
 };
 ```
 
+Pour vérifier que votre serveur utilise à présent `http2`, vous pouvez vérifier dans les `DevTools` de Chrome. Dans le protocole utilisé pour chaque requête, vous devriez voir `h2`
+
+![Chrome DevTools](images/chromedevtools.png)
+
 ### ServerPush
 
 La dernière optimisation que nous allons mettre en place est l'utilisation de la fonctionnalité de ServerPush. Cette 
@@ -109,4 +113,4 @@ res.push('url vers votre ressource statique utilisée dans l'html', {
 
 Vous devez servir ainsi les deux fichiers `script.js` et `style.css` 
 
-Votre serveur utilisera à présent le procole `http2` pour servir votre application. 
+Votre serveur utilise à présent le procole `http2` pour servir votre application. 
