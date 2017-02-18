@@ -1,5 +1,12 @@
 # Codelab Progressive Webapp
 
+## Prérequis
+
+Pour faire ce codelab, vous avez besoin des outils suivants : 
+
+- NodeJS 7.x
+- Google Chrome
+
 ## TP1 - Auditer votre application
 
 Avant d'implémenter les fonctionnalités permettant de rendre une application compatible *Progressive Webapp*, il est intéressant
