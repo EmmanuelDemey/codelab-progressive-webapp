@@ -124,6 +124,11 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## TP4 - Service Worker - AppShell
 
+Pour pouvoir débugger le **cache** de votre navigateur, vous pouvez utiliser les **DevTools**
+de Chrome, et notamment la partie **Cache** de l'onglet **Application**
+
+![Cache - Chrome DevTools](images/cachedevtools.png)
+
 ## TP5 - Service Worker - IndexedDB
 
 ## TP6 - Service Worker - Background Sync
