@@ -44,7 +44,11 @@ normalement être généré.
 * Notez la note initiale retournée par **LightHouse**. Elle doit normalement être égale à ...
 
 
-## TP2 - Mise en place de Http2
+## TP2 - Manifest
+
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
+
+## TP3 - Mise en place de Http2
 
 La première optimisation que nous allons mettre en place est l'utilisation d'HTTP2 sur notre 
 serveur. Le serveur que nous vous proposons est un serveur Express (NodeJS), mais ne supporte
@@ -114,3 +118,17 @@ res.push('url vers votre ressource statique utilisée dans l'html', {
 Vous devez servir ainsi les deux fichiers `script.js` et `style.css` 
 
 Votre serveur utilise à présent le procole `http2` pour servir votre application. 
+
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
+
+## TP4 - Service Worker - AppShell
+
+## TP5 - Service Worker - IndexedDB
+
+## TP6 - Service Worker - Background Sync
+
+## TP7 - Service Worker - SW Toolbox
+
+## TP8 - Service Worker - SW Precache
+
+## TP9 - SSR
