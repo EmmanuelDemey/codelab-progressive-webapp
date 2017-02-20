@@ -3,9 +3,6 @@ const fs = require('fs')
 const app = express()
 const path = require('path')
 
-process.argv.forEach(function (val, index, array) {
-  console.log(index + ': ' + val);
-});
 const http2 = process.argv[2] === 'http2';
 
 if (http2) {
