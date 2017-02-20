@@ -28,6 +28,7 @@ Vous pouvez maintenant auditer l'application que nous vous proposons.
 * Lancez l'application
 
 ```shell
+npm install
 node server.js
 ```
 
