@@ -1,19 +1,90 @@
-<html>
-    <head>
-        <title>Hello</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        
-        Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<link href="img/favicon.png" type="image/png" rel="icon" />
+	<title>[ DEVOXX NEWS ]</title>
 
-        <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                    .register('./sw.js')
-                    .then(function() { console.log('Service Worker Registered'); });
-        }
-        </script>    
-        <script src="script.js"></script>
-    </body>
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+	<!--[if lt IE 9]>
+		<link href="css/ieFix.css" rel="stylesheet" type="text/css" />
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div id="container">
+		<header>
+			<h1><img src="imgs/logo.svg" alt="Devoxx News" /></h1>
+			<p class="baseline">Vox Technologis</p>
+		</header>
+
+		<div id="wrapper">
+
+			<main>
+				<section class="highlight">
+					<h2><a href="#">Découvrez le chien connecté</a></h2>
+					<p class="picture"><img src="imgs/object8.jpg" alt="" /></p>
+					<p class="description">Découvrez ici cinq objets pour le chien connecté, pour que
+						Médor puisse améliorer sa vie et faire attention à ses dépenses d’énergie ou son sommeil !</p>
+					<p class="readmore"><a href="#">Lire l'article</a></p>
+					<ul class="info">
+						<li>11/06/2017</li>
+						<li>561 j'aime</li>
+						<li><button class="icon-like">J'aime</button></li>
+					</ul>
+				</section>
+				<div class="hl-entries">
+					<article class="entry">
+						<h2>Une étude en rose</h2>
+						<p class="picture"><a href="#"><img src="imgs/pict1.jpg" alt="Lire cette matière" /></a></p>
+						<div class="content">
+							<p>Les fans francophones
+								de la série britannique à succès Sherlock vont pouvoir apprécier
+								l'adaptation en manga des scénarios de Steven Moffat et Mark Gatiss.</p>
+						</div>
+					</article>
+					<article class="entry">
+						<h2>« Doctor Who » va à nouveau changer de visage</h2>
+						<p class="picture"><a href="#"><img src="imgs/pict2.jpg" alt="Lire cette matière" /></a></p>
+						<div class="content">
+							<p>L’acteur Peter Capaldi quittera la série culte à la fin de la dixième saison,
+								tout comme le producteur Steven Moffat.</p>
+						</div>
+					</article>
+					<article class="quicky">
+						<h2>Nous sommes complets !</h2>
+						<p class="picture"><a href="#"><img src="imgs/pict3.jpg" alt="" /></a></p>
+						<p>La sixième édition de Devoxx France est sold-out. Les inscriptions au titre de
+							la formation professionnelle sont définitivement closes.</p>
+						<p>Il se peut que des places se libèrent suite à des désistements et uniquement
+							pour les inscriptions classiques. Si vous souhaitez être au courant rapidement,
+							nous vous invitons à nous suivre sur notre compte twitter @devoxxfr.</p>
+						<p>Rendez vous du <strong>05 au 07 avril au Palais des congrès</strong> de la porte Maillot
+							pour un programme des plus alléchants.</p>
+					</article>
+				</div>
+			</main>
+
+			<footer>
+				<p>@gericci &amp; @emmanueldemey for DEVOXX, 2017</p>
+			</footer>
+
+		</div>
+
+	</div> <!-- /container -->
+
+	<script>
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+				.register('./sw.js')
+				.then(function() { console.log('Service Worker Registered'); });
+	}
+	</script>    
+	<script src="/script.js"></script>
+
+</body>
 </html>
