@@ -9,7 +9,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 * Google Chrome
 * Un IDE
 
-## TP1 - Auditer votre application
+## PW1 - Auditer votre application
 
 Avant d'implémenter les fonctionnalités permettant de rendre une application compatible **Progressive Webapp**, il est intéressant
 tout d'abord de faire un petit audit de l'existant. Nous allons éviter de le faire à la main, mais nous allons plutôt utiliser l'outil
@@ -46,11 +46,11 @@ normalement être généré.
 * Notez la note initiale retournée par **LightHouse**. Elle doit normalement être égale à ...
 
 
-## TP2 - Manifest
+## PW2 - Manifest
 
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
-## TP3 - Mise en place de Http2
+## PW3 - Mise en place de Http2
 
 La première optimisation que nous allons mettre en place est l'utilisation d'HTTP2 sur notre 
 serveur. Le serveur que nous vous proposons est un serveur Express (NodeJS), mais ne supporte
@@ -123,19 +123,38 @@ Votre serveur utilise à présent le procole `http2` pour servir votre applicati
 
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
-## TP4 - Service Worker - AppShell
+## PW4 - Service Worker - AppShell
+
+Nous allons à présent mettre en place notre premier service worker 
+afin de mettre en cache l'AppShell de notre application. 
+
+A partir de ce PW, nous allons utiliser la version HTTP de notre serveur. En effet, 
+les service worker ne peuvent normalement être actifs que si ils sont servis via HTTPs. Mais 
+Chrome, sans aucune configuration, les active en HTTP pour les serveurs en `localhost`.
+
+* Dans le fichier `index.html`, si votre navigateur supporte les service workers, enregistrer le service worker `sw.js`.
+
+* Dans la phase `install`, mettre dans un cache **codelab-1**, les fichiers de votre application nécessaire pour faire l'AppShell ('/', 'script.js' et 'style.css')
+
+* Implémentez le `fetch` event pour retourner la version qui est en cache, et si elle n'existe pas, exécutez réélement la requête. 
+
+* Dans la phase `activate`, veuillez supprimer les caches qui ne sont plus utiliser (dont le nom est différent que celui utilisé dans la version actuelle de votre service worker)
+
+* Testez votre application. Après plusieurs rafraichissement, dans l'onglet `network`, vos ressources statiques seront servies par le service worker, et non plus via le réseau. 
+
+Pour émuler le mode offline, vous pouvez le faire via les **DevTools** de Chrome. 
+* Cliquez sur l'onglet **Network**
+* Activez / Désactivez l'option **Offline**
 
 Pour pouvoir débugger le **cache** de votre navigateur, vous pouvez utiliser les **DevTools**
 de Chrome, et notamment la partie **Cache** de l'onglet **Application**
 
 ![Cache - Chrome DevTools](images/cachedevtools.png)
 
-## TP5 - Service Worker - IndexedDB
+## PW5 - Service Worker - IndexedDB
 
-## TP6 - Service Worker - Background Sync
+## PW6 - Service Worker - Background Sync
 
-## TP7 - Service Worker - SW Toolbox
+## PW7 - Service Worker - SW Toolbox
 
-## TP8 - Service Worker - SW Precache
-
-## TP9 - SSR
+## PW8 - Service Worker - SW Precache
