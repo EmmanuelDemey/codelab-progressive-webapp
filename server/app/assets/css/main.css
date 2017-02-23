@@ -78,6 +78,17 @@ button {
 	100% {background-color: #C00; border-radius: 100%;}
 }
 
+@keyframes slideIn {
+	0% {right: -400px; background: rgba(124,255,48, .5);}
+	50% {width: 80%; right: 20%; background: rgba(124,255,48, 1);}
+	100% {width: 100%; right: 0; background: rgba(124,255,48, 0);}
+}
+@keyframes slideOff {
+	0% {right: -400px; background: rgba(0,0,0, .05);}
+	50% {width: 80%; right: 20%; background: rgba(0,0,0, 0.5);}
+	100% {width: 100%; right: 0; background: rgba(0,0,0, 0);}
+}
+
 /*--------------------------------------------------------------------*/
 /*--------------------------- PAGE STRUCTURE -------------------------*/
 /*--------------------------------------------------------------------*/
@@ -92,9 +103,27 @@ header {
 p.baseline {font-family: exomedium, sans-serif; letter-spacing: 0.4em;}
 
  #wrapper {
+ 	 position: relative;
 	 padding-top: 2rem;
 	 margin: 0.5rem 5% 2rem;
 	 border-top: 5px solid #000;
+ }
+ #wrapper::before {
+ 	display: block;
+ 	position: absolute;
+	top: 0.5em;
+ 	right: 0;
+ 	width: 100%;
+ 	content: "Online";
+	font: 0.7em exomedium, sans-serif;
+	text-align: right;
+	text-transform: uppercase;
+	animation: slideIn 1s;
+ 	transition: all 0.5s;
+ }
+ #wrapper.off::before {
+ 	content: "Offline";
+	animation: slideOff 1s;
  }
 
  footer {
