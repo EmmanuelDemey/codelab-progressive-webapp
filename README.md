@@ -43,7 +43,7 @@ L'outil doit normalement vous retourner un rapport d'audit directement dans la c
 Nous allons essayer de corriger tous ces problèmes lors ce codelab. Un rapport HTML doit 
 normalement être généré. 
 
-* Notez la note initiale retournée par **LightHouse**. Elle doit normalement être égale à ...
+* Notez la note initiale retournée par **LightHouse**. Elle doit normalement être égale à 34%.
 
 
 ## PW2 - Manifest
@@ -117,7 +117,11 @@ res.push('url vers votre ressource statique utilisée dans l'html', {
 .end(contenu de votre ressources statique)
 ```
 
-Vous devez servir ainsi les deux fichiers `script.js` et `style.css` 
+Vous devez servir ainsi les fichiers suivants : 
+* le script javascript (`application/javascript`)
+* la feuille de style (`text/css`)
+* les fonts (`font/woff` et `font/woff2`)
+* les images principales (`image/svg+xml`)
 
 Votre serveur utilise à présent le procole `http2` pour servir votre application. 
 
@@ -132,9 +136,11 @@ A partir de ce PW, nous allons utiliser la version HTTP de notre serveur. En eff
 les service worker ne peuvent normalement être actifs que si ils sont servis via HTTPs. Mais 
 Chrome, sans aucune configuration, les active en HTTP pour les serveurs en `localhost`.
 
+* En JavaScript, ajoutez la classe `off` à l'élément `#wrapper` si l'utiliseur est hors ligne. 
+
 * Dans le fichier `index.html`, si votre navigateur supporte les service workers, enregistrer le service worker `sw.js`.
 
-* Dans la phase `install`, mettre dans un cache **codelab-1**, les fichiers de votre application nécessaire pour faire l'AppShell ('/', 'script.js' et 'style.css')
+* Dans la phase `install`, mettre dans un cache **codelab-1**, les fichiers de votre application nécessaire pour faire l'AppShell ('/', le fichier javascript, la feuille de style, les font et les images principals)
 
 * Implémentez le `fetch` event pour retourner la version qui est en cache, et si elle n'existe pas, exécutez réélement la requête. 
 
