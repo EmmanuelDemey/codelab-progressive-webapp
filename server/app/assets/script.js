@@ -4,8 +4,18 @@ window.onload = function() {
     fetch('/articles')
         .then(result => result.json())
         .then(data => displayData(data));
+    
+    if(!navigator.onLine) {
+        document.querySelector('#wrapper').classList.add('off');
+    }
 
-
+    document.body.addEventListener("offline", function () {
+        document.querySelector('#wrapper').classList.add('off');
+    }, false);
+    document.body.addEventListener("online", function () {
+        document.querySelector('#wrapper').classList.remove('off');
+    }, false);
+    
 };
 
 function displayData(data) {
