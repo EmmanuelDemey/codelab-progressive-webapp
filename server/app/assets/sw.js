@@ -3,7 +3,11 @@ const cacheName = 'codelab-1';
 const filesToCache = [
   '/',
   '/script.js',
-  '/style.css',
+  '/css/main.css',
+  '/css/exo-medium-webfont.woff',
+  '/css/exo-medium-webfont.woff2',
+  '/imgs/logo.svg',
+  '/imgs/like.svg'
 ];
 
 self.addEventListener('install', function(e) {
