@@ -1,0 +1,22 @@
+{
+    "highlight": {
+        "title": "Découvrez le chien connecté", 
+        "picture": "imgs/object8.jpg", 
+        "description": "Découvrez ici cinq objets pour le chien connecté, pour que Médor puisse améliorer sa vie et faire attention à ses dépenses d’énergie ou son sommeil !", 
+        "date": "11/06/2017",
+        "like": 561,
+        "ilike": false
+    }, 
+    "entries": [
+        {
+            "title": "Une étude en rose", 
+            "picture": "imgs/pict1.jpg", 
+            "content": "Les fans francophones de la série britannique à succès Sherlock vont pouvoir apprécier l'adaptation en manga des scénarios de Steven Moffat et Mark Gatiss."
+        }, 
+        {
+            "title": "« Doctor Who » va à nouveau changer de visage", 
+            "picture": "imgs/pict2.jpg", 
+            "content": "L’acteur Peter Capaldi quittera la série culte à la fin de la dixième saison, tout comme le producteur Steven Moffat."
+        }
+    ]
+}
