@@ -3,9 +3,20 @@ const fs = require('fs')
 const app = express()
 const path = require('path')
 
+const data = require('./data.json');
+
 app.use(express.static('app/assets'));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/app/index.html');
+});
+
+app.get('/articles', function (req, res) {
+  res.send(data);
+});
+
+app.get('/like', function (req, res) {
+  data.highlight.ilike = !data.highlight.ilike;
+  res.status(200).end();
 });
 
 app.listen(3003);
