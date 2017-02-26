@@ -21,6 +21,7 @@ window.onload = function() {
                 .then(registration => { // register sync
                     document.querySelectorAll('.icon-like').forEach(el => {
                         el.addEventListener('click', function() {
+                            this.classList.toggle('active');
                             console.log('prouts')
                             registration.sync.register('like').then(() => {
                                 console.log('Sync registered');
