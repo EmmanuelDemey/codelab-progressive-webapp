@@ -1,0 +1,30 @@
+{
+  "manifest_version": "2",
+  "name": "Codelab Devoxx News",
+  "short_name": "Devoxx News",
+  "version": "1",
+  "default_locale": "fr",
+  "description": "Demo file for PWD Devoxx codelab",
+  "icons": [{
+        "src": "/img/icon-114.png",
+        "sizes": "114x114",
+        "type": "image/png"
+      }, {
+        "src": "/img/icon-152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "/img/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }, {
+        "src": "/img/icon-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }],
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "author": "Angela P. Ricci",
+  "display": "browser",
+  "start_url": "/index.html"
+  }
