@@ -1,4 +1,4 @@
-const cacheName = 'codelab-2';
+const cacheName = 'codelab-5';
 
 const filesToCache = [
   '/',
@@ -37,3 +37,14 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
+
+self.addEventListener('sync', function(event) {
+  console.log(event)
+  if (event.tag == 'like') {
+    event.waitUntil(sendLike());
+  }
+});
+
+function sendLike(){
+  return fetch('/like')
+}

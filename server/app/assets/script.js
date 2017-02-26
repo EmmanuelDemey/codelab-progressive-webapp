@@ -1,6 +1,4 @@
 window.onload = function() {
-    toLike();
-
     fetch('/articles')
         .then(result => result.json())
         .then(data => displayData(data));
@@ -16,6 +14,22 @@ window.onload = function() {
         document.querySelector('#wrapper').classList.remove('off');
     }, false);
     
+    if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+				.register('./sw.js')
+                .then(registration => navigator.serviceWorker.ready)
+                .then(registration => { // register sync
+                    document.querySelectorAll('.icon-like').forEach(el => {
+                        el.addEventListener('click', function() {
+                            console.log('prouts')
+                            registration.sync.register('like').then(() => {
+                                console.log('Sync registered');
+                            });    
+                        });
+                    });
+                })
+				.then(function() { console.log('Service Worker Registered'); });
+	}
 };
 
 function displayData(data) {
@@ -39,16 +53,3 @@ function displayData(data) {
     });
 
 }
-
-function toLike() {
-    const zLike = document.querySelectorAll('.icon-like');
-
-    zLike.forEach(el => {
-        el.addEventListener('click', function() {
-            fetch('/like').then(() => {
-                    this.classList.toggle('active');
-                });
-        });
-    });
-}
-
