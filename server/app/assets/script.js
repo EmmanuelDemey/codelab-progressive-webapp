@@ -7,10 +7,10 @@ window.onload = function() {
         document.querySelector('#wrapper').classList.add('off');
     }
 
-    document.body.addEventListener("offline", function () {
+    window.addEventListener("offline", function () {
         document.querySelector('#wrapper').classList.add('off');
     }, false);
-    document.body.addEventListener("online", function () {
+    window.addEventListener("online", function () {
         document.querySelector('#wrapper').classList.remove('off');
     }, false);
     
