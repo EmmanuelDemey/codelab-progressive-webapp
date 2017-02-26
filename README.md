@@ -94,7 +94,7 @@ const options = {
 };
 ```
 
-Pour vérifier que votre serveur utilise à présent `http2`, vous pouvez vérifier dans les `DevTools` de Chrome. Dans le protocole utilisé pour chaque requête, vous devriez voir `h2`
+Pour vérifier que votre serveur utilise à présent `http2`, vous pouvez vérifier dans les `DevTools` de Chrome. Dans le protocole utilisé pour chaque requête, vous devriez voir `https`
 
 ![Chrome DevTools](images/chromedevtools.png)
 
@@ -122,6 +122,9 @@ Vous devez servir ainsi les fichiers suivants :
 * la feuille de style (`text/css`)
 * les fonts (`font/woff` et `font/woff2`)
 * les images principales (`image/svg+xml`)
+
+Si vous vérifier de nouveau l'onglet **Network** de la console Chrome, certaines requêtes 
+doivent à présent être initiées par un **Push** du serveur.
 
 Votre serveur utilise à présent le procole `http2` pour servir votre application. 
 
