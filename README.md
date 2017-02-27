@@ -98,6 +98,8 @@ Pour vérifier que votre serveur utilise à présent `http2`, vous pouvez vérif
 
 ![Chrome DevTools](images/chromedevtools.png)
 
+Vous pouvez également vérifier l'onglet **Security** pour vérifier que votre certificat a bien été pris en compte. 
+
 ### ServerPush
 
 La dernière optimisation que nous allons mettre en place est l'utilisation de la fonctionnalité de ServerPush. Cette 
