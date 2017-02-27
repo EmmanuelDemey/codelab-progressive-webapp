@@ -48,6 +48,8 @@ normalement être généré.
 
 ## PW2 - Manifest
 
+Pour valider votre manifest, et si vous avez une connexion, vous pouvez utiliser le site `https://manifest-validator.appspot.com/`.
+
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW3 - Mise en place de Http2
@@ -161,6 +163,8 @@ Pour pouvoir débugger le **cache** de votre navigateur, vous pouvez utiliser le
 de Chrome, et notamment la partie **Cache** de l'onglet **Application**
 
 ![Cache - Chrome DevTools](images/cachedevtools.png)
+
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW5 - Service Worker - IndexedDB
 
