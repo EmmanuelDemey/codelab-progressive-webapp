@@ -182,6 +182,17 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW6 - Service Worker - IndexedDB
 
+Nous allons à finaliser la partie offline de notre application. Nous allons faire cette partie en deux étapes : 
+
+* Sauvegarde des données dans un base **IndexedDB** via la librairie **localforage**
+* Mise en cache des images des articles. 
+
+* Incluez la librairie **localforage** dans votre fichier `index.html`
+* Dans votre fichier `script.js`, lors de la récupération des données, sauvegardez les dans la base **IndexedDB**.
+* Si l'utilisateur n'a pas de réseau, récupérez les données depuis cette base. 
+* Dans le Service Worker, lors d'une requête pour récupérer une image avec l'extension `jpg`, faite d'abord une requête, et si elle tombe en erreur, retournez une version mise en cache.
+
+
 ## PW7 - Service Worker - Background Sync
 
 ## PW8 - Service Worker - SW Toolbox
