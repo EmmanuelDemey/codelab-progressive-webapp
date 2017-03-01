@@ -134,18 +134,32 @@ Votre serveur utilise à présent le procole `http2` pour servir votre applicati
 
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
-## PW4 - Service Worker - AppShell
-
-Nous allons à présent mettre en place notre premier service worker 
-afin de mettre en cache l'AppShell de notre application. 
+## PW4 - Service Worker
 
 A partir de ce PW, nous allons utiliser la version HTTP de notre serveur. En effet, 
 les service worker ne peuvent normalement être actifs que si ils sont servis via HTTPs. Mais 
 Chrome, sans aucune configuration, les active en HTTP pour les serveurs en `localhost`.
 
-* En JavaScript, ajoutez la classe `off` à l'élément `#wrapper` si l'utiliseur est hors ligne. 
+Comme première mise en pratique, nous allons créer un service worker permettant de modifier les réponses de certaines requêtes. La solution que nous allons
+mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant. 
 
-* Dans le fichier `index.html`, si votre navigateur supporte les service workers, enregistrer le service worker `sw.js`.
+* Enregistrez un Service Worker, que vous allez définir dans un fichier **sw.js**, qui sera situé dans le répertoire **server/app/assets**.
+
+* Première exercice, pour chaque requête, retournez le code HTML suivant : 
+
+```html
+<h1> Bonjour Devoxx </h1>
+```
+
+* Second exercice, pour toutes les requêtes envvoyées pour récupérer des images **jpeg**, 
+retourner le fichier **cat.gif** qui est présent dans le répertoire **server/app/assets/imgs**.
+
+## PW5 - Service Worker - AppShell
+
+Nous allons à présent mettre en place notre premier service worker 
+afin de mettre en cache l'AppShell de notre application. 
+
+* En JavaScript, ajoutez la classe `off` à l'élément `#wrapper` si l'utiliseur est hors ligne. 
 
 * Dans la phase `install`, mettre dans un cache **codelab-1**, les fichiers de votre application nécessaire pour faire l'AppShell ('/', le fichier javascript, la feuille de style, les font et les images principals)
 
@@ -166,10 +180,10 @@ de Chrome, et notamment la partie **Cache** de l'onglet **Application**
 
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
-## PW5 - Service Worker - IndexedDB
+## PW6 - Service Worker - IndexedDB
 
-## PW6 - Service Worker - Background Sync
+## PW7 - Service Worker - Background Sync
 
-## PW7 - Service Worker - SW Toolbox
+## PW8 - Service Worker - SW Toolbox
 
-## PW8 - Service Worker - SW Precache
+## PW9 - Service Worker - SW Precache
