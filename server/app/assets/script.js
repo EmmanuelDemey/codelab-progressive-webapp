@@ -1,11 +1,22 @@
 window.onload = function() {
-    fetch('/articles')
-        .then(result => result.json())
-        .then(data => displayData(data));
-    
+    toLike();
+
+    let promise;
+        
     if(!navigator.onLine) {
         document.querySelector('#wrapper').classList.add('off');
+        promise = localforage.getItem('data');
+    } else {
+        promise = fetch('/articles')
+                .then(result => result.json());
     }
+
+    
+    promise.then(data => {
+        displayData(data);
+        return data;
+    })
+    .then(data => localforage.setItem('data', data))
 
     window.addEventListener("offline", function () {
         document.querySelector('#wrapper').classList.add('off');
