@@ -50,6 +50,11 @@ normalement être généré.
 
 Pour valider votre manifest, et si vous avez une connexion, vous pouvez utiliser le site `https://manifest-validator.appspot.com/`.
 
+Pour tester votre Manifest, vous pouvez utiliser les **DevTools* de Chrome, et notamment l'onglet **Application**. Vous pourrez également depuis
+le même panel, tester l'installation de votre application sur le bureau de votre ordinateur. 
+
+![Chrome DevTools - Add tp Home Screen](images/addtohomescreen.png)
+
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW3 - Mise en place de Http2
