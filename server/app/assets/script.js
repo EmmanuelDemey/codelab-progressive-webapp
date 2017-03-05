@@ -27,20 +27,19 @@ window.onload = function() {
     
     if ('serviceWorker' in navigator) {
 		navigator.serviceWorker
-				.register('./sw.js')
+		.register('./sw.js')
                 .then(registration => navigator.serviceWorker.ready)
                 .then(registration => { // register sync
                     document.querySelectorAll('.icon-like').forEach(el => {
                         el.addEventListener('click', function() {
                             this.classList.toggle('active');
-                            console.log('prouts')
                             registration.sync.register('like').then(() => {
                                 console.log('Sync registered');
                             });    
                         });
                     });
                 })
-				.then(function() { console.log('Service Worker Registered'); });
+		.then(function() { console.log('Service Worker Registered'); });
 	}
 };
 
