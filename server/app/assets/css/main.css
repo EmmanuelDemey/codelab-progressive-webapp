@@ -245,3 +245,7 @@ article.entry {
 		margin-left: 5%;
 	}
 }
+
+.hidden {
+	visibility: hidden;
+}
