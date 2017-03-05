@@ -68,6 +68,13 @@ self.addEventListener('fetch', function (e) {
   }
 });
 
+function sendLike(){
+  //return fetch('/like');
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  })
+}
+
 self.addEventListener('sync', function(event) {
   console.log(event)
   if (event.tag == 'like') {

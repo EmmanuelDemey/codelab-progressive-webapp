@@ -1,6 +1,4 @@
 window.onload = function() {
-    toLike();
-
     let promise;
         
     if(!navigator.onLine) {
