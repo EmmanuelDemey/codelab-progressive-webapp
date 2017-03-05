@@ -48,6 +48,7 @@ function displayData(data) {
     highlight.querySelector('.description').innerHTML = data.highlight.description;
     highlight.querySelector('.info li:first-child').innerHTML = data.highlight.date;
     highlight.querySelector('.info li:nth-child(2)').innerHTML = `${data.highlight.like} j'aime`;
+    highlight.classList.remove('hidden');
 
     if(data.highlight.ilike){
         highlight.querySelector('.icon-like').classList.add('active');  
@@ -58,7 +59,7 @@ function displayData(data) {
         e.querySelector('h2').innerHTML = entry.title;
         e.querySelector('img').src = entry.picture;
         e.querySelector('.content p').innerHTML = entry.content;
-    
+        e.classList.remove('hidden');
     });
 
 }
