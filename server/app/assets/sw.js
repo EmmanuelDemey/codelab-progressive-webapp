@@ -1,4 +1,4 @@
-const cacheName = 'codelab-2';
+const cacheName = 'codelab-3';
 
 const filesToCache = [
   '/',
