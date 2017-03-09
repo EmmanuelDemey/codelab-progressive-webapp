@@ -26,17 +26,6 @@ window.onload = function() {
     if ('serviceWorker' in navigator) {
 		navigator.serviceWorker
 		.register('./sw.js')
-                .then(registration => navigator.serviceWorker.ready)
-                .then(registration => { // register sync
-                    document.querySelectorAll('.icon-like').forEach(el => {
-                        el.addEventListener('click', function() {
-                            this.classList.toggle('active');
-                            registration.sync.register('like').then(() => {
-                                console.log('Sync registered');
-                            });    
-                        });
-                    });
-                })
 		.then(function() { console.log('Service Worker Registered'); });
 	}
 };
@@ -62,4 +51,14 @@ function displayData(data) {
         e.classList.remove('hidden');
     });
 
+    document.querySelectorAll('.icon-like').forEach(el => {
+        el.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navigator.serviceWorker.getRegistration().then(registration => {
+                registration.sync.register('like').then(() => {
+                    console.log('Sync registered');
+                });
+            })    
+        });
+    });
 }
