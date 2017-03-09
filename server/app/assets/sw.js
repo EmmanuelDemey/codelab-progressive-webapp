@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/","e6864beaa0c08f8840e8e5c367b22edf"],["/css/exo-medium-webfont.woff","d4ae616d5344228f5e80f94fb0756801"],["/css/exo-medium-webfont.woff2","10e8c1b974ff7eb7317e7a98c9bbcffa"],["/css/main.css","47b248360fa7ab387f70c77951078f2a"],["/imgs/like.svg","a3b12ebc56081e9edd9513b5fc6e763a"],["/imgs/logo.svg","bec9b019f2c1411b0f14348a13b222fe"],["/js/localforage.js","89a5527eb47ec2da5006b355010c4690"],["/script.js","3a3711d0385021099d20a46b51093073"],["/sw-dynamic.js","b62c3110ab46cb08d42bba1d4367e3fd"]];
+var precacheConfig = [["/","e6864beaa0c08f8840e8e5c367b22edf"],["/css/exo-medium-webfont.woff","d4ae616d5344228f5e80f94fb0756801"],["/css/exo-medium-webfont.woff2","10e8c1b974ff7eb7317e7a98c9bbcffa"],["/css/main.css","47b248360fa7ab387f70c77951078f2a"],["/imgs/like.svg","a3b12ebc56081e9edd9513b5fc6e763a"],["/imgs/logo.svg","bec9b019f2c1411b0f14348a13b222fe"],["/js/localforage.js","89a5527eb47ec2da5006b355010c4690"],["/script.js","3a3711d0385021099d20a46b51093073"],["/sw-dynamic.js","8b8cb97a3a3bcc01e6aef8fd999759db"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 

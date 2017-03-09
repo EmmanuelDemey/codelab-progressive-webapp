@@ -35,6 +35,7 @@ if (http2) {
   })
 
   app.use(express.static('app/assets'));
+  app.use(express.static('node_modules/sw-toolbox'));
   
   const options = {
     key: fs.readFileSync('./server.key'),
@@ -46,6 +47,7 @@ if (http2) {
 
 } else {
   app.use(express.static('app/assets'));
+  app.use(express.static('node_modules/sw-toolbox'));
   app.get('/', function (req, res) {
     res.sendFile(__dirname + '/app/index.html');
   })

@@ -1,13 +1,10 @@
+importScripts('/sw-toolbox.js');
+
+toolbox.router.get('/**/*.jpg', toolbox.networkFirst);
+
+/*
 self.addEventListener('fetch', function (e) {
-  /*if(e.request.url.endsWith('.jpg')){
-      e.respondWith(fetch('/imgs/cat.gif'));
-  }*/
-
-  /*e.respondWith( new Response('<h1> Bonjour Devoxx </h1>', {
-        headers: {'Content-Type': 'text/html'}
-  }));*/
-
-
+ 
   if (e.request.url.endsWith('.jpg')) {
     e.respondWith(
       fetch(e.request)
@@ -27,7 +24,7 @@ self.addEventListener('fetch', function (e) {
         })
     );
   }
-});
+});*/
 
 function sendLike(){
   //return fetch('/like');
