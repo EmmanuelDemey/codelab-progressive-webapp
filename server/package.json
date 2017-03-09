@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "sw-toolbox": "3.6.0"
+  },
+  "devDependencies": {
+    "sw-precache": "5.0.0"
   }
 }
