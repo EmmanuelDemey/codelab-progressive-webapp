@@ -13,6 +13,10 @@
     "express": "^4.14.1",
     "http2": "^3.3.6",
     "morgan": "^1.8.1",
-    "spdy": "^3.4.4"
+    "spdy": "^3.4.4",
+    "sw-toolbox": "3.6.0"
+  },
+  "devDependencies": {
+    "sw-precache": "5.0.0"
   }
 }
