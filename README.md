@@ -200,6 +200,14 @@ Nous allons à finaliser la partie offline de notre application. Nous allons fai
 
 ## PW7 - Service Worker - Background Sync
 
+Nous allons à présent mettre en place **Background Sync**, pour fonctionnalite de **Like** d'un article. 
+
+* Dans le service worker, écoutez l'événement **sync** afin d'exécuter une requête de type **GET** vers l'URL `/like' lorsqu`'une synchronisation `like` est envoyée.
+
+* Dans le fichier principal, lors du `click` sur le boutoun *Like*, n'envoyez plus la requête, mais enregistrez plutôt notre synchronisation `like`.
+
+* Testez cette modification en activant et désactivant le réseau sur votre ordinateur. 
+
 ## PW8 - Service Worker - SW Toolbox
 
 ## PW9 - Service Worker - SW Precache
