@@ -224,3 +224,9 @@ Nous allons à présent mettre en place **Background Sync**, pour fonctionnalite
 N'hésitez pas à vérifier le contenu du fichier `sw.js` généré, afin de s'assurer que les fichiers mis en cache sont corrects. 
 
 ## PW9 - Service Worker - SW Toolbox
+
+Pour terminer ce codelab, nous allon simplier le fichier `sw-dynamic` via l'utilisation de la librairie `sw-toolbox` pour gérer la mise en cache des images `*.jpg`.
+
+* Dans le fichier `sw-toolbox`, importez le script `sw-toolbox.js`.
+
+* Remplacez la gestion de l'événement `fetch` par l'utilisation de la librairie précédemment importée. Vous devez utiliser la stratégie `networkFirst` pour toutes les images `jpg`.
