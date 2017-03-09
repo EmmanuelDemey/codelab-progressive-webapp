@@ -6,6 +6,8 @@ const path = require('path')
 const data = require('./data.json');
 
 app.use(express.static('app/assets'));
+app.use(express.static('node_modules/sw-toolbox'));
+
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/app/index.html');
 });
