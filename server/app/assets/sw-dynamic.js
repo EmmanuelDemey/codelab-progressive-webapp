@@ -30,10 +30,7 @@ self.addEventListener('fetch', function (e) {
 });
 
 function sendLike(){
-  //return fetch('/like');
-  return new Promise((resolve, reject) => {
-    resolve(true);
-  })
+  return fetch('/like');
 }
 
 self.addEventListener('sync', function(event) {
