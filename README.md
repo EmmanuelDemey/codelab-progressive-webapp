@@ -159,6 +159,8 @@ mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant.
 * Second exercice, pour toutes les requêtes envvoyées pour récupérer des images **jpeg**, 
 retourner le fichier **cat.gif** qui est présent dans le répertoire **server/app/assets/imgs**.
 
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
+
 ## PW5 - Service Worker - AppShell
 
 Nous allons à présent mettre en place notre premier service worker 
@@ -197,6 +199,7 @@ Nous allons à finaliser la partie offline de notre application. Nous allons fai
 * Si l'utilisateur n'a pas de réseau, récupérez les données depuis cette base. 
 * Dans le Service Worker, lors d'une requête pour récupérer une image avec l'extension `jpg`, faite d'abord une requête, et si elle tombe en erreur, retournez une version mise en cache.
 
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW7 - Service Worker - Background Sync
 
@@ -207,6 +210,8 @@ Nous allons à présent mettre en place **Background Sync**, pour fonctionnalite
 * Dans le fichier principal, lors du `click` sur le boutoun *Like*, n'envoyez plus la requête, mais enregistrez plutôt notre synchronisation `like`.
 
 * Testez cette modification en activant et désactivant le réseau sur votre ordinateur. 
+
+Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW8 - Service Worker - SW Precache
 
