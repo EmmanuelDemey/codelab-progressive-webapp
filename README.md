@@ -141,9 +141,13 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**
 
 ## PW4 - Service Worker
 
-A partir de ce PW, nous allons utiliser la version HTTP de notre serveur. En effet, 
-les service worker ne peuvent normalement être actifs que si ils sont servis via HTTPs. Mais 
-Chrome, sans aucune configuration, les active en HTTP pour les serveurs en `localhost`.
+A partir de ce PW, nous allons utiliser la version HTTP de notre serveur. En effet, les service worker ne peuvent normalement être actifs que si ils sont servis via HTTPs. Mais Chrome, sans aucune configuration, les active en HTTP pour les serveurs en `localhost`.
+
+Si vous désirez tout de même utiliser la version `HTTP2`, vous devez lancer **Chrome** avec les options suivantes : 
+
+```shell
+/usr/bin/google-chrome --user-data-dir=~/tmp --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:3002
+```
 
 Comme première mise en pratique, nous allons créer un service worker permettant de modifier les réponses de certaines requêtes. La solution que nous allons
 mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant. 
