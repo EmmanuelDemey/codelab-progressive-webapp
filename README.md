@@ -9,7 +9,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 * Google Chrome
 * Un IDE
 
-Afin d'éviter les problèmes de réseau le jour J, veuiller cloner ce projet, exécuter les commandes suivantes : 
+Afin d'éviter les problèmes de réseau le jour J, veuiller cloner ce projet et exécuter les commandes suivantes : 
 
 ```shell
 git clone https://github.com/Gillespie59/devoxx-progressive-webapp.git
