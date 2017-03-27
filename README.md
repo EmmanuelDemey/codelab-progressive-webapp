@@ -9,6 +9,15 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 * Google Chrome
 * Un IDE
 
+Afin d'éviter les problèmes de réseau le jour J, veuiller cloner ce projet, exécuter les commandes suivantes : 
+
+```shell
+git clone https://github.com/Gillespie59/devoxx-progressive-webapp.git
+cd server
+npm i -g lighthouse
+npm i
+```
+
 ## PW1 - Auditer votre application
 
 Avant d'implémenter les fonctionnalités permettant de rendre une application compatible **Progressive Webapp**, il est intéressant
@@ -52,6 +61,15 @@ Pour valider votre manifest, et si vous avez une connexion, vous pouvez utiliser
 
 Pour tester votre Manifest, vous pouvez utiliser les **DevTools* de Chrome, et notamment l'onglet **Application**. Vous pourrez également depuis
 le même panel, tester l'installation de votre application sur le bureau de votre ordinateur. 
+
+* Dans le répertoire `server/app/assets`, créez un fichier `manifest.json`, dans lequel vous allez définir les informations suivantes : 
+    * L'URL de base doit être `/`
+    * La propriété `background_color` doit être égale à `#FFFFFF`
+    * La propriété `theme_color` doit être égale à `#000000`
+    * Vous devez utiliser le mode `standalone`
+    * Définissez une valeur pour les propriétés `name` et `short_name`
+    * les icônes  (disponibles dans le répertoire `server/app/assets/imgs/icon-*.png`)
+
 
 ![Chrome DevTools - Add tp Home Screen](images/addtohomescreen.png)
 
