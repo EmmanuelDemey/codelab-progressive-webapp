@@ -1,5 +1,0 @@
-
-O
-'sw-precache-v3--https://localhost:3002/$03738a09-9a52-483c-ae69-9d9caa989e7a
-U
--$$$toolbox-cache$$$https://localhost:3002/$$$$51ea4dc5-675d-49d5-a62c-75ac22785071https://localhost:3002/
