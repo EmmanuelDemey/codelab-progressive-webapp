@@ -53,12 +53,22 @@ function displayData(data) {
 
     document.querySelectorAll('.icon-like').forEach(el => {
         el.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navigator.serviceWorker.getRegistration().then(registration => {
-                registration.sync.register('like').then(() => {
-                    console.log('Sync registered');
-                });
-            })    
+            let promise;
+
+            if ('serviceWorker' in navigator) {
+                promise = navigator.serviceWorker.getRegistration()
+                    .then(registration => {
+                        return registration.sync.register('like')
+                    });
+            } else {
+                promise = fetch('/like');
+            }    
+
+            promise.then(() => {
+                console.log('sync registered')
+                this.classList.toggle('active');
+            })
+
         });
     });
 }
