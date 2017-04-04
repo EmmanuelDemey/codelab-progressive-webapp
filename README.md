@@ -16,6 +16,8 @@ git clone https://github.com/Gillespie59/devoxx-progressive-webapp.git --depth 1
 cd server
 npm i -g lighthouse
 npm i
+
+npm i --save-dev sw-precache sw-toolbox
 ```
 
 ## PW1 - Auditez votre application
