@@ -243,6 +243,8 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**.
     * Via la propriété `importScripts`, il devra importer le fichier `sw-dynamic.js`
     * Grâce aux propriétés `staticFileGlobs` et `stripPrefixMulti`, vous devez mettre en cache les mêmes ressources que dans l'ancienne version : la page principale, les scripts JavaScript, les CSS, les polices et les images SVG.
 
+* Vous pouvez à présent exécuter votre script via la commande `node votrefichier.js`
+
 N'hésitez pas à vérifier le contenu du fichier `sw.js` généré, afin de vous assurer que les fichiers mis en cache sont corrects.
 
 ## PW9 - Service Worker - SW Toolbox
