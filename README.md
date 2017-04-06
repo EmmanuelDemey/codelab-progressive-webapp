@@ -100,6 +100,8 @@ openssl req -new -key server.key -out server.csr
 openssl x509 -req -sha256 -days 365 -in server.csr -signkey
 ```
 
+Si vous avez des soucis pour générer ces certificats, vous trouverez des certificats dans le répertoire `resources`
+
 * Dans le fichier `server.js`, stockez le contenu des fichiers `server.key` et `server.crt` dans deux variables.
 
 * Installez le module `spdy`
