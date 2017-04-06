@@ -102,11 +102,9 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey
 
 Si vous avez des soucis pour générer ces certificats, vous trouverez des certificats dans le répertoire `resources`
 
-* Dans le fichier `server.js`, stockez le contenu des fichiers `server.key` et `server.crt` dans deux variables.
-
 * Installez le module `spdy`
 
-* Instanciez votre serveur grâce au module précédemment téléchargé.
+* Dans le fichier `server.js`, instanciez votre serveur grâce au module précédemment téléchargé.
 
 ```javascript
 require('spdy').createServer(options, app).listen(port);
@@ -134,12 +132,11 @@ La dernière optimisation que nous allons mettre en place est l'utilisation de l
 permet au serveur d'envoyer des ressources statiques avant que le navigateur ne le demande. C'est ainsi que seront servies
 les ressources statiques de notre application, situées dans le répertoire `app/assets`.
 
-* Supprimez l'utilisation du middleware Express `static` qui nous sera à présent inutile.
-* Dans le handler principal de votre serveur, utilisez la méthode `push` de la réponse HTTP afin de retourner le contenu d'un fichier.
-La signature de cette méthode ressemble à :
+* Le middleware Express `static` doit être exécuté après la route **Express**
+* Dans le handler principal de votre serveur, utilisez la méthode `push` de la réponse HTTP afin de retourner le contenu d'un fichier. La signature de cette méthode ressemble à :
 
-```
-res.push('url vers votre ressource statique utilisée dans l'html', {
+```javascript
+res.push('url vers votre ressource statique utilisée dans le html', {
     response: {
         'content-type': 'content-type associé à la ressource statique manipulée'
     }
@@ -167,11 +164,10 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**.
 Si vous désirez tout de même utiliser la version `HTTP2`, vous devez lancer **Chrome** avec les options suivantes :
 
 ```shell
-/usr/bin/google-chrome --user-data-dir=~/tmp --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:3002
+/usr/bin/google-chrome --user-data-dir=~/tmp --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:3003
 ```
 
-Comme première mise en pratique, nous allons créer un service worker permettant de modifier les réponses de certaines requêtes. La solution que nous allons
-mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant.
+Comme première mise en pratique, nous allons créer un service worker permettant de modifier les réponses de certaines requêtes. La solution que nous allons mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant.
 
 * Enregistrez un Service Worker, que vous allez définir dans un fichier **sw.js**. Ce dernier sera situé dans le répertoire **server/app/assets**.
 
@@ -184,12 +180,9 @@ mettre en oeuvre n'est utile que pour ce PW, et sera supprimée dans le suivant.
 * Second exercice : pour toutes les requêtes envoyées pour récupérer des images **jpeg**,
 retournez le fichier **cat.gif** du répertoire **server/app/assets/imgs**.
 
-Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**.
-
 ## PW5 - Service Worker - AppShell
 
-Nous allons maintenant mettre en place notre premier service worker
-afin de mettre en cache l'AppShell de notre application.
+Nous allons maintenant mettre en place notre premier service worker afin de mettre en cache l'AppShell de notre application.
 
 * En JavaScript, ajoutez la classe `off` à l'élément `#wrapper` si l'utiliseur est hors ligne.
 
@@ -243,7 +236,7 @@ Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**.
     * L'événement `fetch` gérant les images `*.jpg`
     * L'événement `sync` de la Background Sync API
 
-* Nous allons écrire un script NodeJS, permettant de générer, via **sw-precache**, la gestion des ressources statiques constituant notre AppShell. Pour cela, vous pouvez créer un fichier `script.js`.
+* Nous allons écrire un script NodeJS, permettant de générer, via **sw-precache**, la gestion des ressources statiques constituant notre AppShell. Pour cela, vous pouvez créer un fichier JavaScript.
 
 * Configurez **sw-precache** afin de respecter les prérequis suivants :
     * Le service worker généré remplacera le fichier `sw.js`
