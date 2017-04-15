@@ -1,0 +1,398 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PW3 - HTTP2 · Introduction à VueJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PW4.html" />
+    
+    
+    <link rel="prev" href="PW2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="PW1.html">
+            
+                <a href="PW1.html">
+            
+                    
+                    PW1 - Auditez votre application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="PW2.html">
+            
+                <a href="PW2.html">
+            
+                    
+                    PW2 - Manifest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="PW3.html">
+            
+                <a href="PW3.html">
+            
+                    
+                    PW3 - HTTP2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PW4.html">
+            
+                <a href="PW4.html">
+            
+                    
+                    PW4 - Service Worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="PW5.html">
+            
+                <a href="PW5.html">
+            
+                    
+                    PW5 - AppShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="PW6.html">
+            
+                <a href="PW6.html">
+            
+                    
+                    PW6 - Background Sync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="PW7.html">
+            
+                <a href="PW7.html">
+            
+                    
+                    PW7 - SW-Precache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="PW8.html">
+            
+                <a href="PW8.html">
+            
+                    
+                    PW8 - SW-Toolbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PW3 - HTTP2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pw3---mise-en-place-de-http2">PW3 - Mise en place de Http2</h2>
+<p>La premi&#xE8;re optimisation que nous allons mettre en place est l&apos;utilisation d&apos;HTTP2 sur notre
+serveur. Le serveur que nous vous proposons est un serveur Express (NodeJS), celui-ci ne supporte
+pour l&apos;instant que HTTP.</p>
+<p>Nous allons donc int&#xE9;grer le module <code>NodeJS</code> <strong>spdy</strong>  afin de g&#xE9;rer cette nouvelle version du protocole.
+Nous vous conseillons de faire les modifications en deux &#xE9;tapes :</p>
+<ul>
+<li>Rendre accessible votre site en HTTP2</li>
+<li>Utilisation la fonctionnalit&#xE9; de <strong>Server Push</strong> pour envoyer les ressources statiques de votre site &#xE0; votre client</li>
+</ul>
+<h3 id="site-accessible-en-http2">Site accessible en HTTP2</h3>
+<ul>
+<li>G&#xE9;n&#xE9;rez les diff&#xE9;rents certificats</li>
+</ul>
+<pre><code class="lang-shell">openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
+openssl rsa -passin pass:x -in server.pass.key -out server.key
+rm server.pass.key
+openssl req -new -key server.key -out server.csr
+openssl x509 -req -sha256 -days 365 -in server.csr -signkey
+</code></pre>
+<p>Si vous avez des soucis pour g&#xE9;n&#xE9;rer ces certificats, vous trouverez des certificats dans le r&#xE9;pertoire <code>resources</code></p>
+<ul>
+<li><p>Installez le module <code>spdy</code></p>
+</li>
+<li><p>Dans le fichier <code>server.js</code>, instanciez votre serveur gr&#xE2;ce au module pr&#xE9;c&#xE9;demment t&#xE9;l&#xE9;charg&#xE9;.</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;spdy&apos;</span>).createServer(options, app).listen(port);
+</code></pre>
+<p>La variable <code>app</code> correspond &#xE0; votre instance <code>express</code>, et <code>options</code> &#xE0; un objet de configuration dans lequel vous allez utiliser
+les certificats r&#xE9;cup&#xE9;r&#xE9;s pr&#xE9;c&#xE9;demment.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> options = {
+    key: fs.readFileSync(<span class="hljs-string">&apos;./server.key&apos;</span>),
+    cert: fs.readFileSync(<span class="hljs-string">&apos;./server.crt&apos;</span>)
+};
+</code></pre>
+<p>Pour v&#xE9;rifier que votre serveur utilise &#xE0; pr&#xE9;sent <code>http2</code>, vous pouvez utiliser les <code>DevTools</code> de Chrome. Dans le protocole de chaque requ&#xEA;te, vous devriez voir <code>https</code>.</p>
+<p><img src="../images/chromedevtools.png" alt="Chrome DevTools"></p>
+<p>Vous pouvez &#xE9;galement ouvrir l&apos;onglet <strong>Security</strong> pour v&#xE9;rifier que votre certificat a bien &#xE9;t&#xE9; pris en compte.</p>
+<h3 id="serverpush">ServerPush</h3>
+<p>La derni&#xE8;re optimisation que nous allons mettre en place est l&apos;utilisation de la fonctionnalit&#xE9; de ServerPush. Celle-ci
+permet au serveur d&apos;envoyer des ressources statiques avant que le navigateur ne le demande. C&apos;est ainsi que seront servies
+les ressources statiques de notre application, situ&#xE9;es dans le r&#xE9;pertoire <code>app/assets</code>.</p>
+<ul>
+<li>Le middleware Express <code>static</code> doit &#xEA;tre ex&#xE9;cut&#xE9; apr&#xE8;s la route <strong>Express</strong></li>
+<li>Dans le handler principal de votre serveur, utilisez la m&#xE9;thode <code>push</code> de la r&#xE9;ponse HTTP afin de retourner le contenu d&apos;un fichier. La signature de cette m&#xE9;thode ressemble &#xE0; :</li>
+</ul>
+<pre><code class="lang-javascript">res.push(<span class="hljs-string">&apos;url vers votre ressource statique utilis&#xE9;e dans le html&apos;</span>, {
+    response: {
+        <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;content-type associ&#xE9; &#xE0; la ressource statique manipul&#xE9;e&apos;</span>
+    }
+})
+.end(contenu de votre ressources statique)
+</code></pre>
+<p>Vous devez servir ainsi les fichiers suivants :</p>
+<ul>
+<li>le script javascript (<code>application/javascript</code>)</li>
+<li>la feuille de style (<code>text/css</code>)</li>
+<li>les polices (<code>font/woff</code> et <code>font/woff2</code>)</li>
+<li>les images principales (<code>image/svg+xml</code>)</li>
+</ul>
+<p>Dans l&apos;onglet <strong>Network</strong> de la console Chrome, certaines requ&#xEA;tes
+doivent &#xE0; pr&#xE9;sent &#xEA;tre initi&#xE9;es par un <strong>Push</strong> du serveur.</p>
+<p>Votre serveur utilise maintenant le protocole <code>http2</code> pour servir votre application.</p>
+<p>Vous pouvez &#xE0; pr&#xE9;sent v&#xE9;rifier le nouveau score calcul&#xE9; par <strong>LightHouse</strong>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="PW2.html" class="navigation navigation-prev " aria-label="Previous page: PW2 - Manifest">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PW4.html" class="navigation navigation-next " aria-label="Next page: PW4 - Service Worker">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PW3 - HTTP2","level":"1.4","depth":1,"next":{"title":"PW4 - Service Worker","level":"1.5","depth":1,"path":"pws/PW4.md","ref":"pws/PW4.md","articles":[]},"previous":{"title":"PW2 - Manifest","level":"1.3","depth":1,"path":"pws/PW2.md","ref":"pws/PW2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW3.md","mtime":"2017-04-15T18:44:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T18:44:54.951Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

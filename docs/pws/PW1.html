@@ -1,0 +1,362 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PW1 - Auditez votre application · Introduction à VueJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PW2.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="PW1.html">
+            
+                <a href="PW1.html">
+            
+                    
+                    PW1 - Auditez votre application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="PW2.html">
+            
+                <a href="PW2.html">
+            
+                    
+                    PW2 - Manifest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="PW3.html">
+            
+                <a href="PW3.html">
+            
+                    
+                    PW3 - HTTP2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PW4.html">
+            
+                <a href="PW4.html">
+            
+                    
+                    PW4 - Service Worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="PW5.html">
+            
+                <a href="PW5.html">
+            
+                    
+                    PW5 - AppShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="PW6.html">
+            
+                <a href="PW6.html">
+            
+                    
+                    PW6 - Background Sync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="PW7.html">
+            
+                <a href="PW7.html">
+            
+                    
+                    PW7 - SW-Precache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="PW8.html">
+            
+                <a href="PW8.html">
+            
+                    
+                    PW8 - SW-Toolbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PW1 - Auditez votre application</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pw1---auditez-votre-application">PW1 - Auditez votre application</h2>
+<p>Avant d&apos;impl&#xE9;menter les fonctionnalit&#xE9;s permettant de rendre une application compatible <strong>Progressive Webapp</strong>, il est int&#xE9;ressant
+tout d&apos;abord de faire un petit audit de l&apos;existant. Nous allons &#xE9;viter de le faire &#xE0; la main, et plut&#xF4;t utiliser l&apos;outil
+<strong>Lighthouse</strong>, d&#xE9;velopp&#xE9; par l&apos;&#xE9;quipe Chrome.</p>
+<p>Cet outil peut soit &#xEA;tre utilis&#xE9; via une extension Chrome, soit en ligne de commande via un module <strong>NPM</strong>. Nous allons utiliser cette derni&#xE8;re
+solution.</p>
+<ul>
+<li>Installez le module <code>lighthouse</code> via <code>NPM</code></li>
+</ul>
+<pre><code class="lang-shell">npm i -g lighthouse
+</code></pre>
+<p>Vous pouvez maintenant auditer l&apos;application que nous vous proposons.</p>
+<ul>
+<li>Lancez l&apos;application</li>
+</ul>
+<pre><code class="lang-shell">npm install
+node server.js
+</code></pre>
+<ul>
+<li>Lancez <strong>LightHouse</strong></li>
+</ul>
+<pre><code class="lang-shell">lighthouse http://localhost:3003/
+</code></pre>
+<p>L&apos;outil doit normalement retourner un rapport d&apos;audit directement dans la console.
+Si tout se passe bien, un rapport HTML est g&#xE9;n&#xE9;r&#xE9;.
+Lors ce codelab, nous allons essayer de corriger tous les probl&#xE8;mes remont&#xE9;s.</p>
+<ul>
+<li>Notez la note initiale retourn&#xE9;e par <strong>LightHouse</strong>. Elle devrait &#xEA;tre &#xE9;gale &#xE0; 34%.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PW2.html" class="navigation navigation-next " aria-label="Next page: PW2 - Manifest">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PW1 - Auditez votre application","level":"1.2","depth":1,"next":{"title":"PW2 - Manifest","level":"1.3","depth":1,"path":"pws/PW2.md","ref":"pws/PW2.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW1.md","mtime":"2017-04-15T18:44:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T18:44:54.951Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
