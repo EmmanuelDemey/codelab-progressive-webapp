@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PW7 - Background Sync · Introduction à VueJS</title>
+        <title>PW9 - SW-Toolbox · Introduction à VueJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PW8.html" />
     
-    
-    <link rel="prev" href="PW6.html" />
+    <link rel="prev" href="PW8.html" />
     
 
     </head>
@@ -180,7 +178,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="PW7.html">
+        <li class="chapter " data-level="1.8" data-path="PW7.html">
             
                 <a href="PW7.html">
             
@@ -206,7 +204,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="PW9.html">
+        <li class="chapter active" data-level="1.10" data-path="PW9.html">
             
                 <a href="PW9.html">
             
@@ -249,7 +247,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PW7 - Background Sync</a>
+        <a href=".." >PW9 - SW-Toolbox</a>
     </h1>
 </div>
 
@@ -264,17 +262,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="pw7---service-worker---background-sync">PW7 - Service Worker - Background Sync</h2>
-<p>Nous allons maintenant mettre en place <strong>Background Sync</strong>, pour ajouter la possibilit&#xE9; de <strong>Like</strong> un article.</p>
+                                <h2 id="pw9---service-worker---sw-toolbox">PW9 - Service Worker - SW Toolbox</h2>
+<p>Pour terminer ce codelab, nous allon simplifier le fichier <code>sw-dynamic</code> via l&apos;utilisation de la biblioth&#xE8;que <code>sw-toolbox</code> pour g&#xE9;rer la mise en cache des images <code>*.jpg</code>.</p>
 <ul>
-<li><p>Dans le service worker, &#xE9;coutez l&apos;&#xE9;v&#xE9;nement <strong>sync</strong> afin d&apos;ex&#xE9;cuter une requ&#xEA;te de type <strong>GET</strong> vers l&apos;URL <code>/like</code> lorsqu&apos;une synchronisation <code>like</code> est envoy&#xE9;e.</p>
+<li><p>Dans le fichier <code>sw-toolbox</code>, importez le script <code>sw-toolbox.js</code>.</p>
 </li>
-<li><p>Dans le fichier principal, lors du <code>click</code> sur le boutoun <em>Like</em>, n&apos;envoyez plus la requ&#xEA;te, mais enregistrez plut&#xF4;t notre synchronisation <code>like</code>.</p>
-</li>
-<li><p>Testez cette modification en activant et d&#xE9;sactivant le r&#xE9;seau sur votre ordinateur.</p>
+<li><p>Remplacez la gestion de l&apos;&#xE9;v&#xE9;nement <code>fetch</code> par l&apos;utilisation de la biblioth&#xE8;que pr&#xE9;c&#xE9;demment import&#xE9;e. Vous devez utiliser la strat&#xE9;gie <code>networkFirst</code> pour toutes les images <code>jpg</code>.</p>
 </li>
 </ul>
-<p>Vous pouvez &#xE0; pr&#xE9;sent v&#xE9;rifier le nouveau score calcul&#xE9; par <strong>LightHouse</strong>.</p>
 
                                 
                                 </section>
@@ -302,14 +297,10 @@
 
             
                 
-                <a href="PW6.html" class="navigation navigation-prev " aria-label="Previous page: PW6 - IndexedDB">
+                <a href="PW8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: PW8 - SW-Precache">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="PW8.html" class="navigation navigation-next " aria-label="Next page: PW8 - SW-Precache">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -318,7 +309,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PW7 - Background Sync","level":"1.8","depth":1,"next":{"title":"PW8 - SW-Precache","level":"1.9","depth":1,"path":"pws/PW8.md","ref":"pws/PW8.md","articles":[]},"previous":{"title":"PW6 - IndexedDB","level":"1.7","depth":1,"path":"pws/PW6.md","ref":"pws/PW6.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW7.md","mtime":"2017-05-05T14:54:27.755Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-05T14:56:37.101Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PW9 - SW-Toolbox","level":"1.10","depth":1,"previous":{"title":"PW8 - SW-Precache","level":"1.9","depth":1,"path":"pws/PW8.md","ref":"pws/PW8.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW9.md","mtime":"2017-05-05T14:54:27.755Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-05T14:56:37.101Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
