@@ -15,8 +15,14 @@ Comme première mise en pratique, nous allons créer un service worker permettan
 * Première exercice : pour chaque requête, retournez le code HTML suivant :
 
 ```html
-<h1> Bonjour Devoxx ! </h1>
+<h1> Bonjour BDX{I/O} ! </h1>
 ```
 
 * Second exercice : pour toutes les requêtes envoyées pour récupérer des images **jpeg**,
 retournez le fichier **cat.gif** du répertoire **server/app/assets/imgs**.
+
+### Références
+
+Plus d'informations sur les service worker
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
