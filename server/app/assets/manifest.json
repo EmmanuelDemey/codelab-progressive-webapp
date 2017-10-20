@@ -1,10 +1,10 @@
 {
   "manifest_version": "2",
-  "name": "Codelab Devoxx News",
-  "short_name": "Devoxx News",
+  "name": "Codelab PWA News",
+  "short_name": "PWA News",
   "version": "1",
   "default_locale": "fr",
-  "description": "Demo file for PWD Devoxx codelab",
+  "description": "Demo file for PWA codelab",
   "icons": [{
         "src": "/imgs/icon-114.png",
         "sizes": "114x114",
@@ -24,7 +24,7 @@
       }],
   "theme_color": "#000000",
   "background_color": "#FFFFFF",
-  "author": "Angela P. Ricci",
+  "author": "Emmanuel Demey & Gautier de Saint Martin Lacaze",
   "display": "standalone",
   "start_url": "/"
   }
