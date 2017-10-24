@@ -5,26 +5,31 @@
   "version": "1",
   "default_locale": "fr",
   "description": "Demo file for PWA codelab",
-  "icons": [{
-        "src": "/imgs/icon-114.png",
-        "sizes": "114x114",
-        "type": "image/png"
-      }, {
-        "src": "/imgs/icon-152.png",
-        "sizes": "152x152",
-        "type": "image/png"
-      }, {
-        "src": "/imgs/icon-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      }, {
-        "src": "/imgs/icon-256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-      }],
+  "icons": [
+    {
+      "src": "/imgs/icon-114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "/imgs/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/imgs/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/imgs/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
   "theme_color": "#000000",
   "background_color": "#FFFFFF",
   "author": "Emmanuel Demey & Gautier de Saint Martin Lacaze",
   "display": "standalone",
-  "start_url": "/"
-  }
+  "start_url": "/?from=webapp"
+}
