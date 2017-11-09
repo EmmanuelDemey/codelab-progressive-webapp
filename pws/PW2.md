@@ -2,7 +2,7 @@
 
 Pour valider votre manifest, et si vous avez une connexion, vous pouvez utiliser le site `https://manifest-validator.appspot.com/`.
 
-Pour tester votre Manifest, vous pouvez utiliser les **DevTools* de Chrome, et notamment l'onglet **Application**. Vous pourrez également y tester l'installation de votre application sur le bureau de votre ordinateur.
+Pour tester votre Manifest, vous pouvez utiliser les **DevTools** de Chrome, et notamment l'onglet **Application**.
 
 * Dans le répertoire `server/app/assets`, créez un fichier `manifest.json`, dans lequel vous allez définir les informations suivantes :
     * L'URL de base doit être `/`

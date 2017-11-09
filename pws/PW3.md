@@ -1,6 +1,6 @@
 ## PW3 - Mise en place de Http2
 
-La première optimisation que nous allons mettre en place est l'utilisation d'HTTP2 sur notre
+La prochaine optimisation que nous allons mettre en place est l'utilisation d'HTTP2 sur notre
 serveur. Le serveur que nous vous proposons est un serveur Express (NodeJS), celui-ci ne supporte
 pour l'instant que HTTP.
 
@@ -51,7 +51,7 @@ Vous pouvez également ouvrir l'onglet **Security** pour vérifier que votre cer
 ### ServerPush
 
 La dernière optimisation que nous allons mettre en place est l'utilisation de la fonctionnalité de ServerPush. Celle-ci
-permet au serveur d'envoyer des ressources statiques avant que le navigateur ne le demande. C'est ainsi que seront servies
+permet au serveur d'envoyer des ressources statiques avant que le navigateur ne les demande. C'est ainsi que seront servies
 les ressources statiques de notre application, situées dans le répertoire `app/assets`.
 
 * Le middleware Express `static` doit être exécuté après la route **Express**
@@ -72,8 +72,7 @@ Vous devez servir ainsi les fichiers suivants :
 * les polices (`font/woff` et `font/woff2`)
 * les images principales (`image/svg+xml`)
 
-Dans l'onglet **Network** de la console Chrome, certaines requêtes
-doivent à présent être initiées par un **Push** du serveur.
+Dans l'onglet **Network** de la console Chrome, certaines requêtes doivent à présent être initiées par un **Push** du serveur.
 
 Votre serveur utilise maintenant le protocole `http2` pour servir votre application.
 

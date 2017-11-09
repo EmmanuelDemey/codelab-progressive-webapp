@@ -15,6 +15,4 @@ Afin d'éviter les problèmes de réseau le jour J, veuillez cloner ce projet, e
 git clone -b step0 https://github.com/Gillespie59/codelab-progressive-webapp.git
 cd server
 npm i
-
-npm i --save-dev sw-precache sw-toolbox
 ```

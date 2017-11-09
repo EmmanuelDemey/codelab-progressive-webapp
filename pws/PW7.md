@@ -6,6 +6,6 @@ Nous allons maintenant mettre en place **Background Sync**, pour ajouter la poss
 
 * Dans le fichier principal, lors du `click` sur le boutoun *Like*, n'envoyez plus la requête, mais enregistrez plutôt notre synchronisation `like`.
 
-* Testez cette modification en activant et désactivant le réseau sur votre ordinateur.
+* Testez cette modification en activant et désactivant le réseau sur votre ordinateur. (Le mode **offline** des DevTools ne peut pas être utilisé pour ce test)
 
 Vous pouvez à présent vérifier le nouveau score calculé par **LightHouse**.

@@ -7,6 +7,4 @@
 * [PW5 - AppShell](pws/PW5.md)
 * [PW6 - IndexedDB](pws/PW6.md)
 * [PW7 - Background Sync](pws/PW7.md)
-* [PW8 - SW-Precache](pws/PW8.md)
-* [PW9 - SW-Toolbox](pws/PW9.md)
 

@@ -33,4 +33,4 @@ L'outil doit normalement retourner un rapport d'audit directement dans la consol
 Si tout se passe bien, un rapport HTML est généré.
 Lors ce codelab, nous allons essayer de corriger tous les problèmes remontés.
 
-* Notez la note initiale retournée par **LightHouse**. Elle devrait être égale à 34%.
+* Vous pouvez également lancer **LightHouse** depuis les **DevTools** de Chrome.
